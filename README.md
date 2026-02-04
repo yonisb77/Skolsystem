@@ -1,33 +1,35 @@
-📚 SkolSystem Console App
-SkolSystem är en robust konsolapplikation byggd i .NET som hanterar elever, kurser och betyg. Genom att använda Entity Framework Core (Database First) kommunicerar applikationen effektivt med en SQL-databas för att erbjuda en stabil och användarvänlig hantering av skoladministration.
+🎓 StudentFlow – School Management System
+StudentFlow är en kraftfull konsolapplikation utvecklad i C# och .NET. Systemet är byggt för att centralisera hanteringen av elever, kurser och betyg genom en robust integration med SQL Server via Entity Framework Core. Med ett fokus på stabilitet och användarvänlighet erbjuder StudentFlow en tydlig översikt av skolans administrativa flöden.
 
-🚀 Funktioner
-📝 Grundläggande hantering (CRUD)
-Hantera Elever: Lista, lägg till och ta bort elever. Vid borttagning rensas även tillhörande kursregistreringar automatiskt.
+🛠 Teknisk Stack
+Språk: C# 11
 
-Kursadministration: Visa en översikt av alla tillgängliga kurser.
+Ramverk: .NET 7
 
-Registrering: Registrera elever på specifika kurser på ett smidigt sätt.
-
-Betygsättning: Uppdatera betyg för elever (validerat enligt skalan: IG eller G).
-
-📊 Rapportering (LINQ)
-Elever per kurs: Se en detaljerad lista över vilka elever som läser vilken kurs.
-
-Skalbarhet: Arkitekturen är förberedd för att enkelt kunna expandera med fler rapporter (t.ex. medelbetyg eller kurser per elev).
-
-⚡ Stabilitet & UX
-Datavalidering: Inbyggd kontroll för att förhindra tomma strängar, felaktiga datumformat eller ogiltiga heltal.
-
-Felhantering: Använder try-catch block för att säkerställa att programmet inte kraschar vid oväntade databas- eller inmatningsfel.
-
-Visuell upplevelse: Fullt stöd för UTF-8 vilket tillåter användning av emojis och tydlig formatering i konsolen.
-
-🛠 Teknologi
-Runtime: .NET 7 / C# 11
-
-ORM: Entity Framework Core 7 (Database First)
+ORM: Entity Framework Core (Database First)
 
 Databas: SQL Server
 
-Query-språk: LINQ för effektiv datautvinning
+Datahantering: LINQ för avancerad filtrering och rapportgenerering
+
+✨ Funktioner
+📋 Administration (CRUD)
+Elevregister: Lista alla elever med unika ID-nummer. Möjlighet att lägga till nya elever eller radera befintliga.
+
+Smart Radering: Vid borttagning av en elev rensas automatiskt alla tillhörande kursregistreringar för att förhindra databasfel (Foreign Key integrity).
+
+Kursöversikt: Se alla kurser och deras kopplade klassrum.
+
+Registreringsmotor: Registrera elever på kurser med inbyggd kontroll som förhindrar dubbelregistreringar.
+
+Betygshantering: Uppdatera betyg med strikt validering (endast G eller IG).
+
+📊 Rapportering
+Elever per kurs: Genererar en visuell rapport som listar varje kurs och tillhörande elever med hjälp av optimerade LINQ-projektioner.
+
+🛡️ Stabilitet & UX
+Datavalidering: Inbyggda hjälpmetoder (LäsHeltal, LäsBetyg) som säkerställer att användaren anger korrekt data utan att programmet kraschar.
+
+Exception Handling: Global felhantering med try-catch för säkra databasanrop.
+
+Visuellt UI: Fullt stöd för UTF-8 vilket ger en modern känsla med emojis och tydliga menyer direkt i terminalen.
